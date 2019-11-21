@@ -65,8 +65,10 @@ extension TableViewController{
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == self.arrData.count - 4{
             if !noMoreResults{
+                
                 //Update page number
                 pageNumber = pageNumber + 1
+                
                 //Auto load more content
                 //Call API for next page
                 
@@ -131,7 +133,7 @@ fileprivate extension TableViewController{
         }
     }
     
-    
+    //ALERT
     func ShowAlert(title:String,Message:String){
         //Create alert controller
         let alert = UIAlertController.init(title: title, message: Message, preferredStyle: .alert)
